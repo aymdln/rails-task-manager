@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+
+<div class="description">
+    <p><%= @task.details %></p>
+</div>
+
+<p class="check"><i class="<%= @check %>"></i> <%= @text_check %></p>
+
+<%= link_to "Back", tasks_path %>

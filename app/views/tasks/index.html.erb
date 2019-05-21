@@ -1,0 +1,9 @@
+<h1><%= @title_page %></h1>
+
+<ul class="tasks">
+    <% @tasks.each do |t| %>
+    <li><i class="<%= t.completed ? "far fa-check-circle checked": "far fa-circle" %>"></i> <%= link_to t.title, task_path(t.id) %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Add task", task_new_path %>
